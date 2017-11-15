@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+	<script src="jquery.mslider.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#test').mslider({
+				initAnimate : false,
+				initSlide : 1,
+				transition: '300ms',
+				menu : "#menu",
+			})
+		});
+	</script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		html, body{
+			height: 100%;
+			width: 100%;
+		}
+		.wrapper{
+			height: 80%;
+			width: 30%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			background: red;
+		}
+		.m-slide{
+			height: 100%;
+			float: left;
+		}
+		.s1{
+			background: blue;
+		}
+		.s2{
+			background: yellow;
+		}
+		.s3{
+			background: white;
+		}
+		.s4{
+			background: black;
+		}
+		#test{
+			height: 100%;
+		}
+		.m-menu-active{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+	</ul>
+	<div class="wrapper">
+		<div id="test">
+			<div class="m-slide s1"></div>
+			<div class="m-slide s2"></div>
+			<div class="m-slide s3"></div>
+			<div class="m-slide s4"></div>
+		</div>
+	</div>
+</body>
+</html>
