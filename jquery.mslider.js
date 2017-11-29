@@ -73,6 +73,10 @@
 				$menu.children().eq(target)
 						.addClass('m-menu-active').siblings()
 						.removeClass('m-menu-active');
+
+		// Fix tab bug by only allow tabindex in current active slide
+		$slider.children('.m-slide').eq(target).find('*').removeAttr("tabindex");
+		$slider.children('.m-slide').eq(target).siblings().find('*').attr("tabindex", -1);
 	}
 
 	$.fn.moveToSlideSelector = function (target) {
